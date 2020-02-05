@@ -1,0 +1,27 @@
+{
+  "name": "quitx-activities",
+  "version": "1.0.0",
+  "description": "QuitX program activities & their definitions. This SDK suggests program activities by evaluating past history & profile of the smoker.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProdioDesignWorks/QuitX-Activities.git"
+  },
+  "keywords": [
+    "quitx",
+    "quitx-activities",
+    "quitx-programs",
+    "smoker-programs",
+    "smoker-activities"
+  ],
+  "author": "Pawan Wagh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProdioDesignWorks/QuitX-Activities/issues"
+  },
+  "homepage": "https://github.com/ProdioDesignWorks/QuitX-Activities#readme",
+  "dependencies": {}
+}
