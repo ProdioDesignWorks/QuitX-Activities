@@ -12,7 +12,7 @@ Features:
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v6+ to run.
+QuitX-Activities requires [Node.js](https://nodejs.org/) v6+ to run.
 
 ```sh
 $ npm install quitx-activities --save
@@ -43,12 +43,12 @@ console.log(
 
 console.log(`Get all programs`);
 console.log(
-	QuitxPrograms.programs().length
+	QuitxPrograms.programs()
 );
 
 console.log(`Get activity A1 definitions`);
 console.log(
-	QuitxPrograms.definitions('A1').length
+	QuitxPrograms.definitions('A1')
 );
 
 console.log(`Get activity definition by id: 64cbfbfb-1f26-4740-b241-dff3c779dfe5`);

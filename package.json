@@ -1,6 +1,6 @@
 {
   "name": "quitx-activities",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QuitX program activities & their definitions. This SDK suggests program activities by evaluating past history & profile of the smoker.",
   "main": "src/index.js",
   "scripts": {
