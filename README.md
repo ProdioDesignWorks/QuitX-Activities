@@ -12,7 +12,7 @@ Features:
 
 ### Installation
 
-QuitX-Activities requires [Node.js](https://nodejs.org/) v6+ to run.
+QuitX-Activities requires [Node.js](https://nodejs.org/) v6+ to run. [NPM](https://www.npmjs.com/package/quitx-activities)
 
 ```sh
 $ npm install quitx-activities --save
@@ -23,7 +23,7 @@ $ npm install quitx-activities --save
 const { QuitxPrograms } = require('quitx-activities');
 
 // Get program activities
-QuitxPrograms.get('A1'); // { music:'', mindfullnessSession: '', activities: '' }
+QuitxPrograms.get('A1'); // { music: [], mindfullness: [], activities: [] }
 ```
 
 # All APIs
