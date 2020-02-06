@@ -29,7 +29,7 @@ QuitxPrograms.get('A1'); // { music:'', mindfullnessSession: '', activities: '' 
 # All APIs
 Also available in examples folder
 ```js
-const { QuitxPrograms } = require('quitx-activities');
+const { QuitxPrograms } = require('../');
 
 console.log(`Get activity: A23`);
 console.log(
@@ -41,18 +41,46 @@ console.log(
 	QuitxPrograms.get('A1')
 );
 
+console.log(`Custom activity: A2`);
+console.log(
+	// Be default activities is set to 3 & suggestions is set to 3
+	QuitxPrograms.get('A2', { activities: 2, suggestions: 1 })
+);
+
+console.log(`Custom activity: A2`);
+console.log(
+	// Define activities to consider by program. This will ignore the random selection of activities.
+	// "activities" property won't have any effect when "classes" property is passed
+	// Still, you can manipulate "suggestions" count
+	QuitxPrograms.get('A4', { classes: [ 'music' ] })
+); 
+
 console.log(`Get all programs`);
 console.log(
 	QuitxPrograms.programs()
 );
 
-console.log(`Get activity A1 definitions`);
+console.log(`Get all activities`);
+const activities = QuitxPrograms.activities();
+console.log(activities);
+
+console.log(`Get ${activities[0]} definitions`);
 console.log(
-	QuitxPrograms.definitions('A1')
+	QuitxPrograms.definitions(activities[0])
 );
 
-console.log(`Get activity definition by id: 64cbfbfb-1f26-4740-b241-dff3c779dfe5`);
+console.log("activities[0]:", activities[0]);
+console.log("Add new definition to an activity")
+const id = QuitxPrograms.add(activities[0], { title: 'lorem ipsum doret' });
+console.log("id:", id);
+
+console.log("Update definition of an activity");
 console.log(
-	QuitxPrograms.getById('64cbfbfb-1f26-4740-b241-dff3c779dfe5')
+	QuitxPrograms.update(activities[0], id, { title: 'lorem ipsum doret - [UPDATED]' })
+);
+
+console.log("Remove definition from an activity");
+console.log(
+	QuitxPrograms.remove(activities[0], id)
 );
 ```

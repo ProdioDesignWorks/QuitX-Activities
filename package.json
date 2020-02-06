@@ -1,6 +1,6 @@
 {
   "name": "quitx-activities",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "QuitX program activities & their definitions. This SDK suggests program activities by evaluating past history & profile of the smoker.",
   "main": "src/index.js",
   "scripts": {
@@ -23,5 +23,9 @@
     "url": "https://github.com/ProdioDesignWorks/QuitX-Activities/issues"
   },
   "homepage": "https://github.com/ProdioDesignWorks/QuitX-Activities#readme",
-  "dependencies": {}
+  "dependencies": {
+    "is": "^3.3.0",
+    "lodash.samplesize": "^4.2.0",
+    "uuid": "^3.4.0"
+  }
 }
