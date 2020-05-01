@@ -21,8 +21,12 @@ const ActivityManager = {
 	get(program = '', { 
     activities: classes = 3, 
     suggestions = 3 ,
-    classes: providedActivities = []
+    classes: providedActivities = [],
+    sources = {}
   } = {}) {
+    if (!!sources) {
+      this.updateSources(sources)
+    }
 		if (!this._programs.includes(program)) {
 			return null;
 		}
@@ -42,7 +46,17 @@ const ActivityManager = {
     });
 
     return definitions;
-	},
+  },
+  updateSources(sources) {
+    const classNames = Object.keys(sources)
+
+    classNames.forEach(cn => {
+      const _className = `_${cn}`
+      if (this[_className]) {
+        this[_className] = sources[cn]
+      }
+    })
+  },
 	programs() {
 		return this._programs;
 	},
